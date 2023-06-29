@@ -225,8 +225,9 @@ int main(int argc, char **argv) {
             for ( int i = 0; i < ins_cnt; i++ ) printf( "%02x ", fgetc(file) );
             if ( ins_cnt <= 2 ) printf( "\t\t" );
             else printf( "\t" );
+            ctx.zdis_end_addr = ctx.zdis_start_addr;
         }
-        ctx.zdis_end_addr = ctx.zdis_start_addr;
+
         if (!zdis_put_inst(&ctx)) break;
     }
 

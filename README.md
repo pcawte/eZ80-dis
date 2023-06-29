@@ -29,8 +29,6 @@ The program has been enhanced versus the original:
 
 - Can use decimal, hex or octal for command line parameters using standard C-format (leading 0x or 0X for hex, or leading 0 for octal)
 
-
-
 - | Command line option | Meaning                                                           |
   | ------------------- | ----------------------------------------------------------------- |
   | --start             | address at which to start disassembly (relative to start of file) |
@@ -89,5 +87,9 @@ ez80-dis --ez80 --start 0x45 --target 0x40000 --address --hex-dump
 040079  f1              pop     af
 04007a  21 00 00 00     ld      hl,$000000
 04007e  c9              ret
-
 ```
+
+## Changes:
+
+- 27/06/2023: initial version adapted from zdis
+- 29/06/2023: corrected bug when hex-dump feature introduced
